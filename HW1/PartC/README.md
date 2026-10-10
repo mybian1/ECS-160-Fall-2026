@@ -1,19 +1,16 @@
 # ECS 160 HW1 — Part C
 
-## Java (required)
-The Java implementation uses the **Visitor** pattern. It provides `Expression`, `ExpressionVisitor<T>`, `NumberNode`, `AddNode`, `MultiplyNode`, and `Evaluator`. No `Main.java` or build scripts are included or changed.
+# Part C Java: Visitor evaluator
 
-The expression `10 + (2 * 3)` evaluates to `16`.
+This implementation matches the provided instructor AST (`Expr`, `Num`, `Add`, `Sub`, `Mult`, `Div`, and `BinaryExpr`).
 
-To integrate, copy the Java classes into your instructor's Part C Java package **only if their class names, APIs, and package match the provided skeleton**. The original Part C starter files have not been provided here; retain the instructor's Main and tests.
+Changes: add `accept` to `Expr` and concrete nodes; add `ExprVisitor` and `Evaluator`; fill in the single `int actual` placeholder in `Main.java`. All supplied test cases remain unchanged. `BinaryExpr.java` is unchanged.
 
-To test this standalone implementation, from the `Java/src/main/java` directory:
+Place the Java source files in `PartC/Java/src/main/java/edu/ucdavis/ecs160/hw1/` of the **original homework repository**. Retain the instructor's `pom.xml` and other build files. Do not include earlier incompatible files (`Expression.java`, `ExpressionVisitor.java`, `NumberNode.java`, `AddNode.java`, `MultiplyNode.java`).
 
-```sh
-javac edu/ucdavis/ecs160/hw1/*.java
-```
+For new node operations, add a visit method to `ExprVisitor`, implement `accept` in the new node, and Java requires all concrete visitors to implement the new visit method at compile time.
 
-**Compile-time check**: With the Visitor pattern, introducing `visitModulo(ModuloNode)` as an abstract method on `ExpressionVisitor<T>` forces `Evaluator` and all other visitor implementations to handle the newly added operation. Merely adding a new node without extending the visitor interface does not guarantee exhaustiveness in Java; the interface must be updated.
+Test: `javac -d /tmp/partc_classes $(find src/main/java -name '*.java')` then `java -ea -cp /tmp/partc_classes edu.ucdavis.ecs160.hw1.Main`.
 
 # Rust Extra Credit
 
