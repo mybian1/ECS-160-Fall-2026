@@ -15,7 +15,7 @@ javac edu/ucdavis/ecs160/hw1/*.java
 
 **Compile-time check**: With the Visitor pattern, introducing `visitModulo(ModuloNode)` as an abstract method on `ExpressionVisitor<T>` forces `Evaluator` and all other visitor implementations to handle the newly added operation. Merely adding a new node without extending the visitor interface does not guarantee exhaustiveness in Java; the interface must be updated.
 
-# Part C – Rust Extra Credit
+# Rust Extra Credit
 
 Only `src/ast.rs` was modified: an `impl Expr` block adds the `eval(&self) -> i64` method used by the instructor's existing `main.rs`.
 
