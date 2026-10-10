@@ -14,11 +14,3 @@
 ## Tradeoff of Python annotation decorators
 
 Decorating methods with `@log` requires editing the original class definition (or each method). A traditional object wrapper can log a class without changing it and can enable/disable behavior by wrapping instances at runtime. Newly added methods also need explicit annotations.
-
-## Testing
-
-From `PartB/Python`: `python3 main.py`
-
-From `PartB/Java/src/main/java`: `javac edu/ucdavis/ecs160/hw1/*.java && java edu.ucdavis.ecs160.hw1.Main`
-
-Run the instructor's `./grade.sh` from the root of the complete original repository after copying changes. This archive is Part B only.
