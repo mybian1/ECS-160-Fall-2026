@@ -15,3 +15,10 @@ javac edu/ucdavis/ecs160/hw1/*.java
 
 **Compile-time check**: With the Visitor pattern, introducing `visitModulo(ModuloNode)` as an abstract method on `ExpressionVisitor<T>` forces `Evaluator` and all other visitor implementations to handle the newly added operation. Merely adding a new node without extending the visitor interface does not guarantee exhaustiveness in Java; the interface must be updated.
 
+# Part C – Rust Extra Credit
+
+Only `src/ast.rs` was modified: an `impl Expr` block adds the `eval(&self) -> i64` method used by the instructor's existing `main.rs`.
+
+The implementation uses exhaustive `match` against all five `Expr` variants. If a new AST variant is added to `Expr`, the Rust compiler reports a non-exhaustive match until this evaluator handles that variant. The existing `main.rs`, `Cargo.toml`, and `Cargo.lock` are copied unchanged from the uploaded starter files.
+
+Run tests with `cargo run` inside this directory.
