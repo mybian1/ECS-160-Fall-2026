@@ -2,8 +2,6 @@
 
 # Java: Visitor evaluator
 
-This implementation matches the provided instructor AST (`Expr`, `Num`, `Add`, `Sub`, `Mult`, `Div`, and `BinaryExpr`).
-
 Changes: add `accept` to `Expr` and concrete nodes; add `ExprVisitor` and `Evaluator`; fill in the single `int actual` placeholder in `Main.java`. All supplied test cases remain unchanged. `BinaryExpr.java` is unchanged.
 
 Place the Java source files in `PartC/Java/src/main/java/edu/ucdavis/ecs160/hw1/` of the **original homework repository**. Retain the instructor's `pom.xml` and other build files. Do not include earlier incompatible files (`Expression.java`, `ExpressionVisitor.java`, `NumberNode.java`, `AddNode.java`, `MultiplyNode.java`).
