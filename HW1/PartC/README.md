@@ -1,6 +1,6 @@
 # ECS 160 HW1 — Part C
 
-# Part C Java: Visitor evaluator
+# Java: Visitor evaluator
 
 This implementation matches the provided instructor AST (`Expr`, `Num`, `Add`, `Sub`, `Mult`, `Div`, and `BinaryExpr`).
 
