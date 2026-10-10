@@ -11,6 +11,6 @@
 - `main.py` is unchanged.
 - `user.py` preserves the original `User`, `AdminUser`, attributes, and snake_case method names. It adds `@log` to `AdminUser` methods and defines a wrapper using `functools.wraps`.
 
-## Tradeoff of Python annotation decorators
+## Disadvantage to using Python's decorator annotation
 
-Decorating methods with `@log` requires editing the original class definition (or each method). A traditional object wrapper can log a class without changing it and can enable/disable behavior by wrapping instances at runtime. Newly added methods also need explicit annotations.
+Using Python’s @decorator annotation is simpler and requires less code, but it is less flexible than implementing the Decorator design pattern manually. A manually implemented decorator can wrap an entire object and dynamically add or remove behavior at runtime. In contrast, Python’s @decorator annotation typically wraps individual methods when they are defined, making it harder to change their behavior dynamically.
