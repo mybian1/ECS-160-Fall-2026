@@ -1,7 +1,5 @@
 # Part B — Decorator Pattern
 
-This version is based on the original instructor PartB starter files.
-
 ## Java
 
 - `User.java` and `AdminUser.java` are unchanged.
